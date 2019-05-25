@@ -1,0 +1,133 @@
+
+
+		type BINARY_NUMBER is range 0..1;
+
+		type BINARY_ARRAY is array(INTEGER range 0..15) of BINARY_NUMBER;
+
+
+
+		A_B_Sum : INTEGER; --A_Array + B_Array
+
+		A_B_Dif : INTEGER; --A_Array - B_Array
+
+		A_R_Sum : INTEGER; --A_Array + Random Integer 
+
+		R_A_Dif : INTEGER; --Random Integer - A_Array
+
+		C_R_Sum : INTEGER; --C_Array + Random Integer 
+
+		A_Random_Int: Integer;
+
+		B_Random_Int: Integer;
+
+		C_Random_Int: Integer;	
+
+		Zero_Array: BINARY_ARRAY := (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+		-- A_Int : INTEGER;
+
+		A_Array: BINARY_ARRAY;
+
+		Temp : BINARY_NUMBER;
+
+		B_Array: BINARY_ARRAY;
+
+		C_Array: BINARY_ARRAY;
+
+		D_Array: BINARY_ARRAY;
+
+		E_Array: BINARY_ARRAY;
+
+		F_Array: BINARY_ARRAY;
+
+		BTI : INTEGER;
+
+
+
+
+		-- converts the binary value to int equivalent 
+
+		--  the loop has to be implemented in the function
+
+		function Bin_To_Int(X : BINARY_ARRAY) return INTEGER; 
+
+
+
+		--  it has to be convert the  int into binary value equivalent 
+
+		--  it would limit the size of int to 16 bits 
+
+		--  the binary array should  be ordering  the least significant bit to the far right
+
+		function Int_To_Bin(X : INTEGER) return BINARY_ARRAY;
+
+
+
+		--  the function would return the sum of two binary arrays 
+
+		function Plus_Overload(First, Second : BINARY_ARRAY)
+
+			return BINARY_ARRAY;
+
+
+
+		-- it would return the sum of binary array and int
+
+		function Plus_Overload(X : BINARY_ARRAY; Y : INTEGER) 
+
+			return BINARY_ARRAY;
+
+
+
+		-- it would return the difference of two binary arrays
+
+		-- subtract the second from the first parameter
+
+		function Minus_Overload(X,Y : BINARY_ARRAY) 
+
+			return BINARY_ARRAY;
+
+
+
+
+
+		-- it would return the difference of binary array and int
+
+		-- subtract the second from the first parameter
+
+		function Minus_Overload(X : BINARY_ARRAY; Y : INTEGER) 
+
+			return BINARY_ARRAY;
+
+
+
+
+
+		-- the array would need to be reserved 
+
+		procedure Reverse_Bin_Arr(X : BINARY_ARRAY);
+
+
+
+
+
+		--  the array would print
+
+		procedure Print_Bin_Arr(X : BINARY_ARRAY);  
+
+		
+
+
+		function Random_Binary return BINARY_NUMBER;
+
+
+
+		function Random_Number return INTEGER;
+
+
+
+		function Top_Random_Number return INTEGER;
+
+
+
+end Asgmt5;
